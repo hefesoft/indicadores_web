@@ -1,0 +1,71 @@
+
+<noscript>
+    <div class="alert alert-block span10">
+        <h4 class="alert-heading">Warning!</h4>
+        <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+    </div>
+</noscript>
+
+<!-- start: Content -->
+<div id="content" class="span10">
+
+
+<ul class="breadcrumb">
+    <li>
+        <i class="icon-home"></i>
+        <a href="index.html">Home</a>
+        <i class="icon-angle-right"></i>
+    </li>
+    <li><a href="#">Dashboard</a></li>
+</ul>
+
+<div class="row-fluid">
+
+    <!--
+
+        <div>
+           {{ monedas.acciones | json }}
+        </div>
+    -->
+
+
+
+
+    <div class="noMarginLeft">
+    </div>
+
+    <div class="span3 statbox green" onTablet="span8" onDesktop="span3">
+        <!--<div class="boxchart">{{ monedas.trm.ultimo_valor.valor }}</div>-->
+        <div class="number">{{monedas.trm.ultimo_valor.valor}}<i class="icon-arrow-up"></i></div>
+        <div class="title">{{monedas.trm.ultimo_valor.nombre + ' ' + monedas.trm.ultimo_valor.fecha}}</div>
+        <!--<div class="footer">
+            <a href="#">Detalles</a>
+        </div>-->
+    </div>
+
+
+    <div class="span3 statbox purple" onTablet="span8" onDesktop="span3">
+        <!--<div class="boxchart">{{ monedas.dolar.ultimo_valor.dolarDemanda }}</div>-->
+        <div class="number">{{monedas.dolar.ultimo_valor.dolarDemanda}}<i class="icon-arrow-up"></i></div>
+        <div class="title">{{monedas.dolar.ultimo_valor.nombre + ' ' + monedas.dolar.ultimo_valor.dolarHora}}</div>
+        <!--<div class="footer">
+            <a href="#">Detalles</a>
+        </div>-->
+    </div>
+
+
+
+    <div ng-repeat="moneda in monedas.monedas_mundo" class="span3 statbox blue offset-0" onTablet="span6" onDesktop="span3">
+        <!--<div class="boxchart">5,6,7,2,0,-4,-2,4,8,2,3,3,2</div>-->
+        <div class="number">{{ moneda.valor }}<i class="icon-arrow-up"></i></div>
+        <div class="title">{{ moneda.nombre + ' ' + moneda.hora }}</div>
+        <!--<div class="footer">
+            <a href="#"> Detalles </a>
+        </div> -->
+    </div>
+
+</div>
+
+
+</div>
+
