@@ -37,7 +37,7 @@
     <div class="span3 statbox green" onTablet="span8" onDesktop="span3">
         <!--<div class="boxchart">{{ monedas.trm.ultimo_valor.valor }}</div>-->
         <div class="number">{{monedas.trm.ultimo_valor.valor}}<i class="icon-arrow-up"></i></div>
-        <div class="title">{{monedas.trm.ultimo_valor.nombre_mostrar + ' ' + monedas.trm.ultimo_valor.fecha}}</div>
+        <div class="title">{{monedas.trm.ultimo_valor.nombre + ' ' + monedas.trm.ultimo_valor.fecha}}</div>
         <!--<div class="footer">
             <a href="#">Detalles</a>
         </div>-->
@@ -57,8 +57,9 @@
 
     <div ng-repeat="moneda in monedas.monedas_mundo" class="span3 statbox blue offset-0" onTablet="span6" onDesktop="span3">
         <!--<div class="boxchart">5,6,7,2,0,-4,-2,4,8,2,3,3,2</div>-->
-        <div class="number">{{ moneda.valor }}<i class="icon-arrow-up"></i></div>
-        <div class="title">{{ moneda.nombre + ' ' + moneda.hora }}</div>
+        <img ng-src="{{moneda.imagen}}"/>
+        <div class="number">${{ moneda.valor }}<i class="icon-arrow-up"></i></div>
+        <div class="title">{{ moneda.nombre_mostrar + ' ' + moneda.hora }}</div>
         <!--<div class="footer">
             <a href="#"> Detalles </a>
         </div> -->
